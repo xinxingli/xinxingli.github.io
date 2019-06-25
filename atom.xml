@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>D:/Users/lxx/Documents/Gridea/output</id>
+    <id>http://lixinxing.xyz</id>
     <title>李新星博客</title>
-    <updated>2019-06-25T14:59:39.475Z</updated>
+    <updated>2019-06-25T14:59:59.961Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="D:/Users/lxx/Documents/Gridea/output"/>
-    <link rel="self" href="D:/Users/lxx/Documents/Gridea/output/atom.xml"/>
+    <link rel="alternate" href="http://lixinxing.xyz"/>
+    <link rel="self" href="http://lixinxing.xyz/atom.xml"/>
     <subtitle>做一个极客</subtitle>
-    <logo>D:/Users/lxx/Documents/Gridea/output/images/avatar.png</logo>
-    <icon>D:/Users/lxx/Documents/Gridea/output/favicon.ico</icon>
+    <logo>http://lixinxing.xyz/images/avatar.png</logo>
+    <icon>http://lixinxing.xyz/favicon.ico</icon>
     <rights>All rights reserved 2019, 李新星博客</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>D:/Users/lxx/Documents/Gridea/output/post/hello-gridea/index.html</id>
-        <link href="D:/Users/lxx/Documents/Gridea/output/post/hello-gridea/index.html">
+        <id>http://lixinxing.xyz/post/hello-gridea</id>
+        <link href="http://lixinxing.xyz/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
