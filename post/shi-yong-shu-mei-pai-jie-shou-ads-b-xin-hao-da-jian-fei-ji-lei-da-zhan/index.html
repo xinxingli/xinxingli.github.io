@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>使用树莓派接收ADS-B信号，搭建飞机雷达站 | 李新星博客</title>
-<link rel="shortcut icon" href="http://lixinxing.xyz/favicon.ico?v=1564675780064">
+<link rel="shortcut icon" href="http://lixinxing.xyz/favicon.ico?v=1564676084980">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://lixinxing.xyz/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="http://lixinxing.xyz">
-  <img class="avatar" src="http://lixinxing.xyz/images/avatar.png?v=1564675780064" alt="">
+  <img class="avatar" src="http://lixinxing.xyz/images/avatar.png?v=1564676084980" alt="">
   </a>
   <h1 class="site-title">
     李新星博客
@@ -91,13 +91,15 @@
 <p>搭建的地面站上运行 FlightAware 的 PiAware 软件，用于跟踪在 100-400km （视线内，取决于天线的安装范围） 内的飞行，并自动将数据传送给 FlightAware。 之后就可以查看追踪到的飞行数据。</p>
 <!-- more --> 
 <h1 id="一-所需材料">一、所需材料</h1>
-<p>1.树莓派（要求Raspberry Pi 2以上的版本，同时支持aspberry Pi Zero W，但不支持Raspberry Pi 3A+）
-2.树莓派必须配件，如电源、SD卡
-3.USB SDR ADS-B接收器（USB SDR（Software Defined Radio - 软件定义无线电）ADS-B（广播式自动相关监视）接收器将1090 MHz无线电信号转换为计算机可以识别的信息）
-4.1090 MHz天线（飞机在飞行时将信息以1090MHz的频率向外发送）
+<ol>
+<li>树莓派（要求Raspberry Pi 2以上的版本，同时支持aspberry Pi Zero W，但不支持Raspberry Pi 3A+）</li>
+<li>树莓派必须配件，如电源、SD卡</li>
+<li>USB SDR ADS-B接收器（USB SDR（Software Defined Radio - 软件定义无线电）ADS-B（广播式自动相关监视）接收器将1090 MHz无线电信号转换为计算机可以识别的信息）</li>
+<li>1090 MHz天线（飞机在飞行时将信息以1090MHz的频率向外发送）
 一般在购买ADS-B接收器的时候附带1090MHz的天线，但是如果不带的话需要自己购买。推荐购买贵一点的，不然信号会比较差。
 我是在淘宝上买的ADS-B接收器，自带有1090MHz的天线，价格比较便宜，仅仅45元。
-<img src="http://lixinxing.xyz/post-images/1564673707028.JPG" alt=""></p>
+<img src="http://lixinxing.xyz/post-images/1564673707028.JPG" alt=""></li>
+</ol>
 <h1 id="二-树莓派上安装piaware软件">二、树莓派上安装PiAware软件</h1>
 <p>这里有两种方法，一种是直接在安装好系统的树莓派上安装PiAware，二是直接在树莓派上安装PiAware软件的镜像。我这里是用的第二种方法，即直接安装了镜像。如果仅要安装软件的话，可以看<a href="https://flightaware.com/adsb/piaware/install">这篇文章</a>。</p>
 <ol>

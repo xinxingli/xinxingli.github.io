@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://lixinxing.xyz</id>
     <title>李新星博客</title>
-    <updated>2019-08-01T16:09:47.870Z</updated>
+    <updated>2019-08-01T16:14:48.788Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://lixinxing.xyz"/>
     <link rel="self" href="http://lixinxing.xyz/atom.xml"/>
@@ -23,13 +23,15 @@
 <p>搭建的地面站上运行 FlightAware 的 PiAware 软件，用于跟踪在 100-400km （视线内，取决于天线的安装范围） 内的飞行，并自动将数据传送给 FlightAware。 之后就可以查看追踪到的飞行数据。</p>
 <!-- more --> 
 <h1 id="一-所需材料">一、所需材料</h1>
-<p>1.树莓派（要求Raspberry Pi 2以上的版本，同时支持aspberry Pi Zero W，但不支持Raspberry Pi 3A+）
-2.树莓派必须配件，如电源、SD卡
-3.USB SDR ADS-B接收器（USB SDR（Software Defined Radio - 软件定义无线电）ADS-B（广播式自动相关监视）接收器将1090 MHz无线电信号转换为计算机可以识别的信息）
-4.1090 MHz天线（飞机在飞行时将信息以1090MHz的频率向外发送）
+<ol>
+<li>树莓派（要求Raspberry Pi 2以上的版本，同时支持aspberry Pi Zero W，但不支持Raspberry Pi 3A+）</li>
+<li>树莓派必须配件，如电源、SD卡</li>
+<li>USB SDR ADS-B接收器（USB SDR（Software Defined Radio - 软件定义无线电）ADS-B（广播式自动相关监视）接收器将1090 MHz无线电信号转换为计算机可以识别的信息）</li>
+<li>1090 MHz天线（飞机在飞行时将信息以1090MHz的频率向外发送）
 一般在购买ADS-B接收器的时候附带1090MHz的天线，但是如果不带的话需要自己购买。推荐购买贵一点的，不然信号会比较差。
 我是在淘宝上买的ADS-B接收器，自带有1090MHz的天线，价格比较便宜，仅仅45元。
-<img src="http://lixinxing.xyz/post-images/1564673707028.JPG" alt=""></p>
+<img src="http://lixinxing.xyz/post-images/1564673707028.JPG" alt=""></li>
+</ol>
 <h1 id="二-树莓派上安装piaware软件">二、树莓派上安装PiAware软件</h1>
 <p>这里有两种方法，一种是直接在安装好系统的树莓派上安装PiAware，二是直接在树莓派上安装PiAware软件的镜像。我这里是用的第二种方法，即直接安装了镜像。如果仅要安装软件的话，可以看<a href="https://flightaware.com/adsb/piaware/install">这篇文章</a>。</p>
 <ol>
@@ -112,38 +114,6 @@ Micro-SD卡插槽，用于加载操作系统和数据存储
 启用以太网供电（PoE）（需要单独的PoE HAT）
 工作温度：0 – 50摄氏度环境温度
 *如果下游USB外设总共消耗的电流低于500mA，则可以使用高质量的2.5A电源。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>http://lixinxing.xyz/post/hello-gridea</id>
-        <link href="http://lixinxing.xyz/post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
