@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://lixinxing.xyz</id>
     <title>李新星博客</title>
-    <updated>2019-08-01T16:14:48.788Z</updated>
+    <updated>2019-08-01T16:15:56.919Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://lixinxing.xyz"/>
     <link rel="self" href="http://lixinxing.xyz/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2019, 李新星博客</rights>
     <entry>
         <title type="html"><![CDATA[使用树莓派接收ADS-B信号，搭建飞机雷达站]]></title>
-        <id>http://lixinxing.xyz/post/shi-yong-shu-mei-pai-jie-shou-ads-b-xin-hao-da-jian-fei-ji-lei-da-zhan</id>
-        <link href="http://lixinxing.xyz/post/shi-yong-shu-mei-pai-jie-shou-ads-b-xin-hao-da-jian-fei-ji-lei-da-zhan">
+        <id>http://lixinxing.xyz/post/ADS-B</id>
+        <link href="http://lixinxing.xyz/post/ADS-B">
         </link>
         <updated>2019-08-01T14:47:30.000Z</updated>
         <summary type="html"><![CDATA[<p>飞机在飞行中会发出ADS-B信号，会将自己的位置、飞行速度、高度等信息广播出来，我们使用树莓派，搭建一个ADS-B信号的地面接收站，从而监测附近飞机的飞行信息，模拟一个雷达站。</p>
