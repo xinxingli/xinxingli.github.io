@@ -1,0 +1,176 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>使用树莓派接收ADS-B信号，搭建飞机雷达站 | 李新星博客</title>
+<link rel="shortcut icon" href="http://lixinxing.xyz/favicon.ico?v=1564675780064">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://lixinxing.xyz/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="http://lixinxing.xyz">
+  <img class="avatar" src="http://lixinxing.xyz/images/avatar.png?v=1564675780064" alt="">
+  </a>
+  <h1 class="site-title">
+    李新星博客
+  </h1>
+  <p class="site-description">
+    做一个极客
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              使用树莓派接收ADS-B信号，搭建飞机雷达站
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-08-01 ·
+              </time>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('http://lixinxing.xyz/post-images/shi-yong-shu-mei-pai-jie-shou-ads-b-xin-hao-da-jian-fei-ji-lei-da-zhan.png')">
+              </div>
+            
+            <div class="post-content">
+              <p>飞机在飞行中会发出ADS-B信号，会将自己的位置、飞行速度、高度等信息广播出来，我们使用树莓派，搭建一个ADS-B信号的地面接收站，从而监测附近飞机的飞行信息，模拟一个雷达站。</p>
+<p>搭建的地面站上运行 FlightAware 的 PiAware 软件，用于跟踪在 100-400km （视线内，取决于天线的安装范围） 内的飞行，并自动将数据传送给 FlightAware。 之后就可以查看追踪到的飞行数据。</p>
+<!-- more --> 
+<h1 id="一-所需材料">一、所需材料</h1>
+<p>1.树莓派（要求Raspberry Pi 2以上的版本，同时支持aspberry Pi Zero W，但不支持Raspberry Pi 3A+）
+2.树莓派必须配件，如电源、SD卡
+3.USB SDR ADS-B接收器（USB SDR（Software Defined Radio - 软件定义无线电）ADS-B（广播式自动相关监视）接收器将1090 MHz无线电信号转换为计算机可以识别的信息）
+4.1090 MHz天线（飞机在飞行时将信息以1090MHz的频率向外发送）
+一般在购买ADS-B接收器的时候附带1090MHz的天线，但是如果不带的话需要自己购买。推荐购买贵一点的，不然信号会比较差。
+我是在淘宝上买的ADS-B接收器，自带有1090MHz的天线，价格比较便宜，仅仅45元。
+<img src="http://lixinxing.xyz/post-images/1564673707028.JPG" alt=""></p>
+<h1 id="二-树莓派上安装piaware软件">二、树莓派上安装PiAware软件</h1>
+<p>这里有两种方法，一种是直接在安装好系统的树莓派上安装PiAware，二是直接在树莓派上安装PiAware软件的镜像。我这里是用的第二种方法，即直接安装了镜像。如果仅要安装软件的话，可以看<a href="https://flightaware.com/adsb/piaware/install">这篇文章</a>。</p>
+<ol>
+<li>下载 <a href="http://piaware.flightcdn.com/piaware-sd-card-3.7.1.img.zip">PiAware on Raspbian Linux 3.7.1 ZIP (426MB) </a>文件并保存到您的计算机上。</li>
+<li>将下载的镜像刻录到SD卡上，我推荐用Etcher进行刻录。</li>
+<li>修改配置文件以启用WIFI：将SD卡重新插回电脑，然后打开boot磁盘，选择piaware-config.txt文件，找到下面两行</li>
+</ol>
+<pre><code>wireless-ssid MyWifiNetwork 
+wireless-password s3cr3t 
+</code></pre>
+<p>将自己WiFi的名称和密码替换掉“MyWifiNetwork”和“s3cr3t ”即可，然后保存配置文件。</p>
+<h1 id="三-启用piaware设备">三、启用PiAware设备</h1>
+<ol>
+<li>将SD卡插到树莓派上</li>
+<li>将USB SDR ADS-B接收器插入Raspberry Pi</li>
+<li>将天线电缆紧紧插入USB SDR ADS-B接收器</li>
+<li>插上网线（如果有WiFi并且配置了WiFi则可以省掉这一步）</li>
+<li>插上Raspberry Pi的电源</li>
+</ol>
+<p><img src="http://lixinxing.xyz/post-images/1564675492980.JPG" alt="连接了接收器和天线的树莓派">
+这时PiAware设备就启动了</p>
+<h1 id="四-查看ads-b统计数据">四、查看ADS-B统计数据</h1>
+<p>PiAware启动大约需要5分钟时间，启动完成后就会显示接收状态，可以通过显示屏来观察，如下图。
+<img src="http://lixinxing.xyz/post-images/1564674695905.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1564674746267.JPG" alt=""></p>
+<p>也可以通过PiAware网页来查看，打开http:ip/ (这里的IP是树莓派的IP地址)，可以观察到接收状态。
+<img src="http://lixinxing.xyz/post-images/1564674924311.png" alt="">
+出现如上显示就表明雷达站搭建成功了</p>
+<h1 id="五-在-flightawarecom上绑定piaware客户端">五、在 FlightAware.com上绑定PiAware客户端</h1>
+<p>FlightAware是最好的飞行跟踪站点，可以实时跟踪地图、飞行状态、航空公司航班延误、私人/通用航空飞行及机场信息，国内的非常准公司提供的业务和其类似。</p>
+<p>在FlightAware.com上绑定PiAware客户端后，就可以将自己的树莓派上接收到的飞机信息上传到FlightAware网站，绑定后，可以获得如下好处：</p>
+<ol>
+<li>flightaware.com上的实时数据（存在最多两分钟的标准数据处理延迟）</li>
+<li>访问本地设备最近一秒接收的最新实时数据（可通过本地网络连接在统计信息页面访问）</li>
+<li>来自本地设备的数据在FlightAware航迹上突出显示</li>
+<li>站点性能详细统计</li>
+<li>一个免费Enterprise Account (价值每月89.95美刀)</li>
+</ol>
+<p>绑定后可以看自己的设备情况
+<img src="http://lixinxing.xyz/post-images/1564675286897.png" alt=""></p>
+<h1 id="六-雷达站搭建完成">六、雷达站搭建完成</h1>
+<p>好，到这里，雷达站就搭建成功了，可以查看接收到的飞机信号了。
+<img src="http://lixinxing.xyz/post-images/1564675372018.png" alt="搜索到飞机啦"></p>
+<p>最多的时候搜索到4架飞机
+<img src="http://lixinxing.xyz/post-images/1564675449952.png" alt=""></p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="http://lixinxing.xyz/post/shu-mei-pai-4-fa-bu-la">
+              <h3 class="post-title">
+                树莓派4发布啦
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="http://lixinxing.xyz/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
