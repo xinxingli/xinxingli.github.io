@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://lixinxing.xyz</id>
     <title>李新星博客</title>
-    <updated>2019-12-29T02:04:05.777Z</updated>
+    <updated>2019-12-29T02:29:56.075Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://lixinxing.xyz"/>
     <link rel="self" href="http://lixinxing.xyz/atom.xml"/>
@@ -10,6 +10,50 @@
     <logo>http://lixinxing.xyz/images/avatar.png</logo>
     <icon>http://lixinxing.xyz/favicon.ico</icon>
     <rights>All rights reserved 2019, 李新星博客</rights>
+    <entry>
+        <title type="html"><![CDATA[再回山东理工大学，一切还是很熟悉]]></title>
+        <id>http://lixinxing.xyz/post/sdut</id>
+        <link href="http://lixinxing.xyz/post/sdut">
+        </link>
+        <updated>2019-12-29T02:20:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>今年10月份，非常有幸，单位安排我去山东淄博学习2天，正好有机会再回趟母校，虽然时间很紧张，只有短短的30分钟，但已经足够。已经离开母校3年多了，变化很大，但一切还是和熟悉，这里的一草一木仿佛和当年一样，充满生机。愿母校发展的更好，愿以后还有机会再回母校参观。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>今年10月份，非常有幸，单位安排我去山东淄博学习2天，正好有机会再回趟母校，虽然时间很紧张，只有短短的30分钟，但已经足够。已经离开母校3年多了，变化很大，但一切还是和熟悉，这里的一草一木仿佛和当年一样，充满生机。愿母校发展的更好，愿以后还有机会再回母校参观。</p>
+<!-- more -->
+<p><img src="http://lixinxing.xyz/post-images/1577586275052.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586279539.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586282861.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586299190.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586303465.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586306418.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586309024.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586318735.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586373549.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586377077.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586382727.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586385587.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586393363.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586396356.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586399081.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586403508.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586410627.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586415051.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586419027.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586422908.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586427779.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586431674.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586436452.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586442988.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586450215.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586455236.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586459065.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586462908.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586466552.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586471049.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586474880.JPG" alt="">
+<img src="http://lixinxing.xyz/post-images/1577586478580.JPG" alt=""></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用树莓派接收ADS-B信号，搭建飞机雷达站]]></title>
         <id>http://lixinxing.xyz/post/ADS-B</id>
