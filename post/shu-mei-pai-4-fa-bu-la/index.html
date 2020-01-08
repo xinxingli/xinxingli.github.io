@@ -1,140 +1,165 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>树莓派4发布啦 | 李新星博客</title>
-<link rel="shortcut icon" href="http://lixinxing.xyz/favicon.ico?v=1577586546387">
+<meta name="description" content="做一个极客">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://lixinxing.xyz/favicon.ico?v=1578475240227">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://lixinxing.xyz/styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="http://lixinxing.xyz">
-  <img class="avatar" src="http://lixinxing.xyz/images/avatar.png?v=1577586546387" alt="">
-  </a>
-  <h1 class="site-title">
-    李新星博客
-  </h1>
-  <p class="site-description">
-    做一个极客
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://lixinxing.xyz">
+        <img src="http://lixinxing.xyz/images/avatar.png?v=1578475240227" class="site-logo">
+        <h1 class="site-title">李新星博客</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      做一个极客
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://lixinxing.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              树莓派4发布啦
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2019-06-25 ·
-              </time>
-              
-            </div>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">树莓派4发布啦</h2>
+            <div class="post-date">2019-06-25</div>
             
-              <div class="post-feature-image" style="background-image: url('http://blog-qiniu.lxx1.com/wp-content/uploads/2019/06/2019-06-25_212530-750x410.jpg')">
+              <div class="feature-container" style="background-image: url('http://blog-qiniu.lxx1.com/wp-content/uploads/2019/06/2019-06-25_212530-750x410.jpg')">
               </div>
             
             <div class="post-content">
               <p>树莓派4终于发布了，继上次树莓派3更新已经过去好长时间，这次更新可以说是更新最大的一次，新的树莓派有以下几个特点：</p>
-<p>一、主要更新内容
-一是支持双显示和4K输出：
+<p>一、主要更新内容<br>
+一是支持双显示和4K输出：<br>
 使用Raspberry Pi 4，可以同时运行两个显示器 – 也可以使用4K！</p>
-<p>二是可以支持更大的内存
+<p>二是可以支持更大的内存<br>
 更新后的树莓派4可以支持  1GB，2GB或4GB 内存，对应价格分别为$35（约￥241）、$45（约￥310）、$55（约￥379）</p>
-<p>三是快速联网
+<p>三是快速联网<br>
 更新后的 Raspberry Pi 4配备千兆以太网，以及板载双频无线网络和蓝牙5.0</p>
-<p>四是支持USB 3.0
+<p>四是支持USB 3.0<br>
 新的Raspberry Pi 4升级了USB容量：除了两个USB 2端口，还可以找到两个USB 3端口，可以将数据传输速度提高十倍</p>
 <p>二、树莓派 4技术规格</p>
-<p>Broadcom BCM2711，四核Cortex-A72（ARM v8）64位SoC @ 1.5GHz
-1GB，2GB或4GB LPDDR4-2400 SDRAM（取决于型号）
-2.4 GHz和5.0 GHz IEEE 802.11ac无线，蓝牙5.0，BLE
-千兆以太网
-2个USB 3.0端口; 2个USB 2.0端口。
-Raspberry Pi标准40针GPIO接头（完全向后兼容以前的主板）
-2个micro-HDMI端口（最高支持4kp60）
-2通道MIPI DSI显示端口
-双通道MIPI CSI摄像头端口
-4极立体声音频和复合视频端口
-H.265（4kp60解码），H264（1080p60解码，1080p30编码）
-OpenGL ES 3.0图形
-Micro-SD卡插槽，用于加载操作系统和数据存储
-通过USB-C连接器提供5V DC（最小3A *）
-通过GPIO接头提供5V DC电压（最小3A *）
-启用以太网供电（PoE）（需要单独的PoE HAT）
-工作温度：0 – 50摄氏度环境温度
+<p>Broadcom BCM2711，四核Cortex-A72（ARM v8）64位SoC @ 1.5GHz<br>
+1GB，2GB或4GB LPDDR4-2400 SDRAM（取决于型号）<br>
+2.4 GHz和5.0 GHz IEEE 802.11ac无线，蓝牙5.0，BLE<br>
+千兆以太网<br>
+2个USB 3.0端口; 2个USB 2.0端口。<br>
+Raspberry Pi标准40针GPIO接头（完全向后兼容以前的主板）<br>
+2个micro-HDMI端口（最高支持4kp60）<br>
+2通道MIPI DSI显示端口<br>
+双通道MIPI CSI摄像头端口<br>
+4极立体声音频和复合视频端口<br>
+H.265（4kp60解码），H264（1080p60解码，1080p30编码）<br>
+OpenGL ES 3.0图形<br>
+Micro-SD卡插槽，用于加载操作系统和数据存储<br>
+通过USB-C连接器提供5V DC（最小3A *）<br>
+通过GPIO接头提供5V DC电压（最小3A *）<br>
+启用以太网供电（PoE）（需要单独的PoE HAT）<br>
+工作温度：0 – 50摄氏度环境温度<br>
 *如果下游USB外设总共消耗的电流低于500mA，则可以使用高质量的2.5A电源。</p>
 
             </div>
-          </article>
+            
+            
+
+            
+
+          </div>
+
         </div>
-
-        
-
-        
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="http://lixinxing.xyz/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>

@@ -1,157 +1,189 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>李新星博客</title>
-<link rel="shortcut icon" href="http://lixinxing.xyz/favicon.ico?v=1577586546387">
+<meta name="description" content="做一个极客">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://lixinxing.xyz/favicon.ico?v=1578475240227">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://lixinxing.xyz/styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="http://lixinxing.xyz">
-  <img class="avatar" src="http://lixinxing.xyz/images/avatar.png?v=1577586546387" alt="">
-  </a>
-  <h1 class="site-title">
-    李新星博客
-  </h1>
-  <p class="site-description">
-    做一个极客
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
+    <div id="app" class="main">
 
-    
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="http://lixinxing.xyz/post/sdut">
-        <h2 class="post-title">再回山东理工大学，一切还是很熟悉</h2>
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://lixinxing.xyz">
+        <img src="http://lixinxing.xyz/images/avatar.png?v=1578475240227" class="site-logo">
+        <h1 class="site-title">李新星博客</h1>
       </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-12-29 ·
-        </time>
-        
-      </div>
-      
-        <a href="http://lixinxing.xyz/post/sdut" class="post-feature-image" style="background-image: url('http://lixinxing.xyz/post-images/sdut.JPG')">
-        </a>
-      
-      <div class="post-abstract">
-        <p>今年10月份，非常有幸，单位安排我去山东淄博学习2天，正好有机会再回趟母校，虽然时间很紧张，只有短短的30分钟，但已经足够。已经离开母校3年多了，变化很大，但一切还是和熟悉，这里的一草一木仿佛和当年一样，充满生机。愿母校发展的更好，愿以后还有机会再回母校参观。</p>
-
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="http://lixinxing.xyz/post/ADS-B">
-        <h2 class="post-title">使用树莓派接收ADS-B信号，搭建飞机雷达站</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-08-01 ·
-        </time>
-        
-      </div>
-      
-        <a href="http://lixinxing.xyz/post/ADS-B" class="post-feature-image" style="background-image: url('http://lixinxing.xyz/post-images/ADS-B.png')">
-        </a>
-      
-      <div class="post-abstract">
-        <p>飞机在飞行中会发出ADS-B信号，会将自己的位置、飞行速度、高度等信息广播出来，我们使用树莓派，搭建一个ADS-B信号的地面接收站，从而监测附近飞机的飞行信息，模拟一个雷达站。</p>
-<p>搭建的地面站上运行 FlightAware 的 PiAware 软件，用于跟踪在 100-400km （视线内，取决于天线的安装范围） 内的飞行，并自动将数据传送给 FlightAware。 之后就可以查看追踪到的飞行数据。</p>
-
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="http://lixinxing.xyz/post/shu-mei-pai-4-fa-bu-la">
-        <h2 class="post-title">树莓派4发布啦</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2019-06-25 ·
-        </time>
-        
-      </div>
-      
-        <a href="http://lixinxing.xyz/post/shu-mei-pai-4-fa-bu-la" class="post-feature-image" style="background-image: url('http://blog-qiniu.lxx1.com/wp-content/uploads/2019/06/2019-06-25_212530-750x410.jpg')">
-        </a>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-</div>
-
-    
-        <div class="pagination-container">
-  
-  
-</div>
-
-    
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="http://lixinxing.xyz/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
       </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      做一个极客
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://lixinxing.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://lixinxing.xyz/post/sdut">
+                  <h2 class="post-title">再回山东理工大学，一切还是很熟悉</h2>
+                </a>
+                <div class="post-date">
+                  2019-12-29
+                </div>
+                <div class="post-abstract">
+                  <p>今年10月份，非常有幸，单位安排我去山东淄博学习2天，正好有机会再回趟母校，虽然时间很紧张，只有短短的30分钟，但已经足够。已经离开母校3年多了，变化很大，但一切还是和熟悉，这里的一草一木仿佛和当年一样，充满生机。愿母校发展的更好，愿以后还有机会再回母校参观。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="http://lixinxing.xyz/post/sdut">
+                  <div class="feature-container" style="background-image: url('http://lixinxing.xyz/post-images/sdut.JPG')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://lixinxing.xyz/post/ADS-B">
+                  <h2 class="post-title">使用树莓派接收ADS-B信号，搭建飞机雷达站</h2>
+                </a>
+                <div class="post-date">
+                  2019-08-01
+                </div>
+                <div class="post-abstract">
+                  <p>飞机在飞行中会发出ADS-B信号，会将自己的位置、飞行速度、高度等信息广播出来，我们使用树莓派，搭建一个ADS-B信号的地面接收站，从而监测附近飞机的飞行信息，模拟一个雷达站。</p>
+<p>搭建的地面站上运行 FlightAware 的 PiAware 软件，用于跟踪在 100-400km （视线内，取决于天线的安装范围） 内的飞行，并自动将数据传送给 FlightAware。 之后就可以查看追踪到的飞行数据。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="http://lixinxing.xyz/post/ADS-B">
+                  <div class="feature-container" style="background-image: url('http://lixinxing.xyz/post-images/ADS-B.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://lixinxing.xyz/post/shu-mei-pai-4-fa-bu-la">
+                  <h2 class="post-title">树莓派4发布啦</h2>
+                </a>
+                <div class="post-date">
+                  2019-06-25
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+                <a class="right" href="http://lixinxing.xyz/post/shu-mei-pai-4-fa-bu-la">
+                  <div class="feature-container" style="background-image: url('http://blog-qiniu.lxx1.com/wp-content/uploads/2019/06/2019-06-25_212530-750x410.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>
