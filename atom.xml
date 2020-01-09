@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://lixinxing.xyz</id>
     <title>李新星博客</title>
-    <updated>2020-01-09T13:32:18.254Z</updated>
+    <updated>2020-01-09T13:32:45.480Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://lixinxing.xyz"/>
     <link rel="self" href="http://lixinxing.xyz/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, 李新星博客</rights>
     <entry>
         <title type="html"><![CDATA[再回山东理工大学，一切还是很熟悉]]></title>
-        <id>http://lixinxing.xyz/post/sdut</id>
-        <link href="http://lixinxing.xyz/post/sdut">
+        <id>http://lixinxing.xyz/sdut</id>
+        <link href="http://lixinxing.xyz/sdut">
         </link>
         <updated>2019-12-29T02:20:51.000Z</updated>
         <summary type="html"><![CDATA[<p>今年10月份，非常有幸，单位安排我去山东淄博学习2天，正好有机会再回趟母校，虽然时间很紧张，只有短短的30分钟，但已经足够。已经离开母校3年多了，变化很大，但一切还是和熟悉，这里的一草一木仿佛和当年一样，充满生机。愿母校发展的更好，愿以后还有机会再回母校参观。</p>
@@ -56,8 +56,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[使用树莓派接收ADS-B信号，搭建飞机雷达站]]></title>
-        <id>http://lixinxing.xyz/post/ADS-B</id>
-        <link href="http://lixinxing.xyz/post/ADS-B">
+        <id>http://lixinxing.xyz/ADS-B</id>
+        <link href="http://lixinxing.xyz/ADS-B">
         </link>
         <updated>2019-08-01T14:47:30.000Z</updated>
         <summary type="html"><![CDATA[<p>飞机在飞行中会发出ADS-B信号，会将自己的位置、飞行速度、高度等信息广播出来，我们使用树莓派，搭建一个ADS-B信号的地面接收站，从而监测附近飞机的飞行信息，模拟一个雷达站。</p>
@@ -125,8 +125,8 @@ wireless-password s3cr3t
     </entry>
     <entry>
         <title type="html"><![CDATA[树莓派4发布啦]]></title>
-        <id>http://lixinxing.xyz/post/shu-mei-pai-4-fa-bu-la</id>
-        <link href="http://lixinxing.xyz/post/shu-mei-pai-4-fa-bu-la">
+        <id>http://lixinxing.xyz/shu-mei-pai-4-fa-bu-la</id>
+        <link href="http://lixinxing.xyz/shu-mei-pai-4-fa-bu-la">
         </link>
         <updated>2019-06-25T15:03:24.000Z</updated>
         <content type="html"><![CDATA[<p>树莓派4终于发布了，继上次树莓派3更新已经过去好长时间，这次更新可以说是更新最大的一次，新的树莓派有以下几个特点：</p>
