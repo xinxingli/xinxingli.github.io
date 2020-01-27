@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://lixinxing.xyz</id>
     <title>李新星博客</title>
-    <updated>2020-01-09T13:32:45.480Z</updated>
+    <updated>2020-01-27T12:14:57.932Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://lixinxing.xyz"/>
     <link rel="self" href="http://lixinxing.xyz/atom.xml"/>
@@ -10,6 +10,56 @@
     <logo>http://lixinxing.xyz/images/avatar.png</logo>
     <icon>http://lixinxing.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 李新星博客</rights>
+    <entry>
+        <title type="html"><![CDATA[解决安装Mysql的"c : fatal error: Killed signal terminated program cc1plus compilation "错误]]></title>
+        <id>http://lixinxing.xyz/-tvcd00CT</id>
+        <link href="http://lixinxing.xyz/-tvcd00CT">
+        </link>
+        <updated>2020-01-27T12:00:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>在Linux上安装MySQL、PHP时，服务器内存较小的情况下（0.5G或者1G内存时），会出现“c : fatal error: Killed signal terminated program cc1plus compilation &quot;错误，可以通过增大服务器SWAP大小来解决，本文是解决办法。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在Linux上安装MySQL、PHP时，服务器内存较小的情况下（0.5G或者1G内存时），会出现“c : fatal error: Killed signal terminated program cc1plus compilation &quot;错误，可以通过增大服务器SWAP大小来解决，本文是解决办法。</p>
+<!-- more -->
+<p>对于make编译，如果是阿里云centos主机内存小于2G的，可能会在make编译到45%、63%时报错；如果是腾讯云centos主机内存为1G时，可能会在make编译到64%时报错。</p>
+<pre><code>===============阿里云测试结果(引用)==================
+
+c++: Internal error: Killed (program cc1plus)
+Please submit a full bug report.
+See &lt;http://bugzilla.redhat.com/bugzilla&gt; for instructions.
+make[2]: *** [sql/CMakeFiles/sql.dir/item_geofunc.cc.o] Error 1
+make[1]: *** [sql/CMakeFiles/sql.dir/all] Error 2
+make: *** [all] Error 2
+
+
+================腾讯云测试结果(实测)=================
+
+g++: fatal error: Killed signal terminated program cc1plus
+compilation terminated.
+make[2]: *** [sql/CMakeFiles/sql_gis.dir/gis/crosses.cc.o] Error 1
+make[1]: *** [sql/CMakeFiles/sql_gis.dir/all] Error 2
+make: *** [all] Error 2
+</code></pre>
+<p>以上均为内存不足所致，可通过设置2G交换分区来解决该问题。</p>
+<p>解决方案：</p>
+<pre><code>#获取要增加的2G的SWAP文件块
+dd if=/dev/zero of=/swapfile bs=1k count=2048000
+#创建SWAP文件
+mkswap /swapfile 
+#激活SWAP文件
+swapon /swapfile   
+#查看SWAP信息是否正确
+swapon -s  
+#添加到fstab文件中让系统引导时自动启动
+echo &quot;/var/swapfile swap swap defaults 0 0&quot; &gt;&gt; /etc/fstab
+</code></pre>
+<p>swapfile文件的路径在/var/下，编译完后, 如果不想要交换分区了, 可以删除。</p>
+<p>删除交换分区：</p>
+<pre><code>swapoff /swapfile
+rm -rf /swapfile
+</code></pre>
+<p>至此，问题解决。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[再回山东理工大学，一切还是很熟悉]]></title>
         <id>http://lixinxing.xyz/sdut</id>
